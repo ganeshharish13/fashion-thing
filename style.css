@@ -1,0 +1,270 @@
+/* =======================
+   Fonts & General
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.65;
+  letter-spacing: 0.5px;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2e7d32;
+}
+
+/* =======================
+   Header & Navigation
+======================= */
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1f1f1f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+
+.nav a:hover {
+  color: #2e7d32;
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* =======================
+   Categories Section
+======================= */
+.categories {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.8);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;      /* full image visible */
+  max-height: 250px; /* adjust for uniformity */
+  object-fit: contain; /* keeps image from being cropped */
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* =======================
+   Category Descriptions
+======================= */
+.category-desc {
+  position: static;       /* place below image */
+  background: #1f1f1f;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  margin-top: -4px; /* slight overlap for neat look */
+  transition: background 0.3s;
+}
+
+.category-card:hover .category-desc {
+  background: #2a2a2a;
+}
+
+/* =======================
+   Page Banner Images
+======================= */
+.page-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+/* =======================
+   Forms
+======================= */
+form {
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #121212;
+  color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #2e7d32;
+  color: #121212;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+}
+
+.btn.small {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+/* =======================
+   Info Messages
+======================= */
+.info {
+  background: #333;
+  color: #2e7d32;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =======================
+   Grids (Tutorials & Pre-Made)
+======================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.grid .card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.8);
+}
+
+.grid .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #555;
+}
+
+.grid .card h3 {
+  margin: 12px 0;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* =======================
+   Footer
+======================= */
+footer,
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #1f1f1f;
+  color: #b0b0b0;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  font-size: 0.95rem;
+}
